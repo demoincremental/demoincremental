@@ -1,19 +1,19 @@
 //playerData for saves.
 var money = "";
-var AutoPrinters = "";
-var AutoPrinterCost = 10;
+var AutoIncrementers = "";
+var AutoIncrementerCost = 10;
 
 function loadAllValues() {
   document.getElementById('TotalMoney').innerHTML = money;
-  document.getElementById('TotalAutoPrinters').innerHTML = AutoPrinters;
-  document.getElementById('AutoPrinterCost').innerHTML = AutoPrinterCost;
+  document.getElementById('TotalAutoIncrementers').innerHTML = AutoIncrementers;
+  document.getElementById('AutoIncrementerCost').innerHTML = AutoIncrementerCost;
 }
 
 function saveGame() {
   var playerData = {
     money: money,
-    AutoPrinters: AutoPrinters,
-    AutoPrinterCost: AutoPrinterCost
+    AutoIncrementers: AutoIncrementers,
+    AutoIncrementerCost: AutoIncrementerCost
   }
   //stringifying the player data for JSON.
   localStorage.setItem("playerData", JSON.stringify(playerData));
@@ -22,8 +22,8 @@ function saveGame() {
 var autoSave = window.setInterval(function() {
   var playerData = {
     money: money,
-    AutoPrinters: AutoPrinters,
-    AutoPrinterCost: AutoPrinterCost
+    AutoIncrementers: AutoIncrementers,
+    AutoIncrementerCost: AutoIncrementerCost
   }
   //stringifying the player data for JSON.
   localStorage.setItem("playerData", JSON.stringify(playerData));
@@ -33,8 +33,8 @@ var autoSave = window.setInterval(function() {
 function loadGame() {
   var gamesave = JSON.parse(localStorage.getItem("playerData"));
   money = gamesave.money;
-  AutoPrinters = gamesave.AutoPrinters;
-  AutoPrinterCost = gamesave.AutoPrinterCost;
+  AutoIncrementers = gamesave.AutoIncrementers;
+  AutoIncrementerCost = gamesave.AutoIncrementerCost;
   loadAllValues();
 }
 
@@ -47,8 +47,8 @@ function saveKill() {
   )
   if (saveKillPrompt.toLowerCase() == "delete save") {
     money = "";
-    AutoPrinters = "";
-    AutoPrinterCost = 10;
+    AutoIncrementers = "";
+    AutoIncrementerCost = 10;
     localStorage.removeItem("playerData")
   }
   loadAllValues();

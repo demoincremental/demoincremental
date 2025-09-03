@@ -1,25 +1,25 @@
-function BuyAutoPrinter() {
-  if (money >= AutoPrinterCost) {
-    money = money - AutoPrinterCost;
-    AutoPrinters++;
-    AutoPrinterCost = Math.round(AutoPrinterCost * 1.2);
+function BuyAutoIncrementer() {
+  if (money >= AutoIncrementerCost) {
+    money = money - AutoIncrementerCost;
+    AutoIncrementers++;
+    AutoIncrementerCost = Math.round(AutoIncrementerCost * 1.2);
     document.getElementById('TotalMoney').innerHTML = money;
-    document.getElementById('TotalAutoPrinters').innerHTML = AutoPrinters;
-    document.getElementById('AutoPrinterCost').innerHTML = AutoPrinterCost;
+    document.getElementById('TotalAutoIncrementers').innerHTML = AutoIncrementers;
+    document.getElementById('AutoIncrementerCost').innerHTML = AutoIncrementerCost;
   }
 }
 
-//making the auto printers automatically print money.
-var autoPrinting = setInterval(function() {money = money + AutoPrinters, document.getElementById('TotalMoney').innerHTML = money} , 1000)
+//making the auto Incrementers automatically Increment money.
+var autoIncrementing = setInterval(function() {money = money + AutoIncrementers, document.getElementById('TotalMoney').innerHTML = money} , 1000)
 //1000ms = 1 second
 
 //finding offline progress 
 var playerData = {
   money: money,
-  AutoPrinters: AutoPrinters,
-  AutoPrinterCost: AutoPrinterCost,
+  AutoIncrementers: AutoIncrementers,
+  AutoIncrementerCost: AutoIncrementerCost,
 }
 
 document.getElementById('TotalMoney').innerHTML = money;
-document.getElementById('AutoPrinterCost').innerHTML = AutoPrinterCost;
-document.getElementById('TotalAutoPrinters').innerHTML = AutoPrinters;
+document.getElementById('AutoIncrementerCost').innerHTML = AutoIncrementerCost;
+document.getElementById('TotalAutoIncrementers').innerHTML = AutoIncrementers;

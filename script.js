@@ -1,7 +1,7 @@
 //player data
 var money = "";
-var AutoPrinters = "";
-var AutoPrinterCost = 10;
+var AutoIncrementers = "";
+var AutoIncrementerCost = 10;
 
 //incrementing the money and illegal money.
 function getrich() {
@@ -11,7 +11,7 @@ function getrich() {
 
 function tab(tab) {
   //hide all your tabs, then show the one the user selected.
-  document.getElementById("optionsMenu").style.display = "none";
+  document.getElementById("settingsMenu").style.display = "none";
   document.getElementById("shopMenu").style.display = "none";
   document.getElementById(tab).style.display = "inline-block";
 }
@@ -19,5 +19,5 @@ function tab(tab) {
 tab("shopMenu");
 
 document.getElementById('TotalMoney').innerHTML = money;
-document.getElementById('AutoPrinterCost').innerHTML = AutoPrinterCost;
-document.getElementById('TotalAutoPrinters').innerHTML = AutoPrinters;
+document.getElementById('AutoIncrementerCost').innerHTML = AutoIncrementerCost;
+document.getElementById('TotalAutoIncrementers').innerHTML = AutoIncrementers;
