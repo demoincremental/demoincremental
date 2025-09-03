@@ -105,8 +105,8 @@ body {
   height: 80%;
   position:relative;
   left: 50%;
-  top: 40%;
-  transform: translate(-50%, -60%);
+  top: 60%;
+  transform: translate(-50%, -80%);
 }
 .savegame {
   font-family: 'Courier New', Courier, monospace;
@@ -200,5 +200,6 @@ body {
   background-color: black
   color: #f8f8ff;
   top: x %;
-  margin: 0px;
-  useful format
+  margin: 0px; 
+
+  useful format */
